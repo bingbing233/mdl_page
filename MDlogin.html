@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="material.min.js"></script>
+    <link rel="stylesheet" href="material.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>登录</title>
+</head>
+<style type="text/css">
+    body {
+        background: #f1f1f1;
+    }
+
+    #root {
+        padding: 20px;
+        width: 400px;
+        height: 320px;
+        background: #ffffff;
+        margin: 0 auto;
+        position: relative;
+        bottom: -80px;
+        border-radius: 5px;
+        box-shadow: darkgrey 10px 10px 30px 5px;
+
+    }
+
+    #inner {
+        width: 300px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    #login_button {
+        background: #4286F3;
+        color: #ffffff;
+        width: 300px;
+        margin-top: 20px;
+        border-radius: 100px;
+    }
+
+    #remember {
+        margin-top: 20px;
+    }
+    #progressBar{
+        margin-top: 5px;
+        display: none;
+        
+    }
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <div id="inner">
+            <!-- Textfield with Floating Label -->
+
+            <form action="#" id="text1">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3">account</label>
+                </div>
+            </form>
+            <!-- password Textfield with Floating Label -->
+            <form action="#" id="text2">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="sample4">
+                    <label class="mdl-textfield__label" for="sample4">password</label>
+                </div>
+            </form>
+            <!-- Raised button -->
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="login_button" onclick="onButtonClick()">
+                login
+                <!-- MDL Spinner Component with Single Color -->
+                <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"id="progressBar"></div>
+            </button>
+
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1" id="remember">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label">remember</span>
+            </label>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    function onButtonClick() {
+        document.getElementById("login_button").innerHTML = "logining...";
+    }
+</script>
+
+</html>
